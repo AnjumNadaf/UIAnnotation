@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="http://183.82.98.9:8057/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZA_C_ASSOCIATION_CDS" xml:lang="ar" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZA_C_ASSOCIATIONType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Supplierid"/>
+                </Key>
+                <Property Name="Supplierid" Type="Edm.String" Nullable="false" MaxLength="5" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Productid" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Productname" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Pquantity" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Suppliername" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Slocation" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Supconno" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label=""/>
+            </EntityType>
+            <EntityContainer Name="ZA_C_ASSOCIATION_CDS_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZA_C_ASSOCIATION" EntityType="ZA_C_ASSOCIATION_CDS.ZA_C_ASSOCIATIONType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://183.82.98.9:8057/sap/opu/odata/sap/ZA_C_ASSOCIATION_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://183.82.98.9:8057/sap/opu/odata/sap/ZA_C_ASSOCIATION_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
